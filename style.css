@@ -1,0 +1,244 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #17233d,
+        #263b62,
+        #18233a
+    );
+
+    color: white;
+    font-family: sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 700px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.description {
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+button {
+    font-size: 20px;
+
+    padding: 15px 35px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #e8d59b;
+    color: #26304a;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+#result {
+    margin-top: 30px;
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    border-radius: 15px;
+
+    min-height: 50px;
+}
+
+#result h2 {
+    margin-top: 10px;
+}
+
+#result p {
+    font-size: 18px;
+    margin: 8px;
+}
+
+/* フィルターの並び */
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* フィルターボタン */
+.filter-button {
+    cursor: pointer;
+}
+
+/* 本物のチェックボックスは隠す */
+.filter-button input {
+    display: none;
+}
+
+/* ボタンの見た目 */
+.filter-button span {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: 0.2s;
+}
+
+/* マウスを乗せたとき */
+.filter-button span:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* 選択中 */
+.filter-button input:checked + span {
+    background: #e8d59b;
+    color: #26304a;
+    border-color: #e8d59b;
+    box-shadow: 0 0 15px rgba(232, 213, 155, 0.5);
+}
+
+/* キャラクターカード */
+.party-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* キャラクター1人分 */
+.character-card {
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.2s;
+}
+
+/* マウスを乗せたとき */
+.character-card:hover {
+    transform: translateY(-4px);
+    filter: brightness(1.2);
+}
+
+/* 元素 */
+.element {
+    font-size: 15px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+/* キャラクター名 */
+.character-name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* レアリティ */
+.rarity {
+    margin-top: 8px;
+    letter-spacing: 3px;
+}
+
+/* ボス */
+.boss-card {
+    margin: 25px auto 0;
+    padding: 22px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(232, 213, 155, 0.4);
+    text-align: center;
+}
+
+/* ボスタイトル */
+.boss-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* ボス名 */
+.boss-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+/* 結果の登場アニメーション */
+#result {
+    animation: resultFadeIn 0.5s ease;
+}
+
+@keyframes resultFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 元素ごとのカードカラー */
+
+.element-炎 {
+    background: rgba(220, 80, 50, 0.25);
+    border-color: rgba(255, 120, 80, 0.5);
+}
+
+.element-水 {
+    background: rgba(50, 130, 220, 0.25);
+    border-color: rgba(80, 160, 255, 0.5);
+}
+
+.element-風 {
+    background: rgba(100, 190, 150, 0.25);
+    border-color: rgba(130, 220, 180, 0.5);
+}
+
+.element-雷 {
+    background: rgba(150, 80, 210, 0.3);
+    border-color: rgba(190, 120, 255, 0.6);
+}
+
+.element-草 {
+    background: rgba(80, 170, 90, 0.25);
+    border-color: rgba(110, 210, 120, 0.5);
+}
+
+.element-氷 {
+    background: rgba(100, 190, 220, 0.25);
+    border-color: rgba(130, 220, 255, 0.5);
+}
+
+.element-岩 {
+    background: rgba(200, 160, 70, 0.25);
+    border-color: rgba(230, 190, 100, 0.5);
+}

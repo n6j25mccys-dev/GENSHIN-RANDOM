@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>原神ランダムチャレンジ</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>原神ランダムチャレンジ</h1>
+
+        <p class="description">
+            4人のキャラクターとボスをランダムで決めよう！
+        </p>
+
+        <p>出したい元素を選択：</p>
+
+<div class="filter-group">
+
+    <label class="filter-button">
+        <input type="checkbox" name="element" value="炎">
+        <span>🔥 炎</span>
+    </label>
+
+    <label class="filter-button">
+        <input type="checkbox" name="element" value="水">
+        <span>💧 水</span>
+    </label>
+
+    <label class="filter-button">
+        <input type="checkbox" name="element" value="風">
+        <span>🌪️ 風</span>
+    </label>
+
+    <label class="filter-button">
+        <input type="checkbox" name="element" value="雷">
+        <span>⚡ 雷</span>
+    </label>
+
+    <label class="filter-button">
+        <input type="checkbox" name="element" value="草">
+        <span>🌿 草</span>
+    </label>
+
+    <label class="filter-button">
+        <input type="checkbox" name="element" value="氷">
+        <span>❄️ 氷</span>
+    </label>
+
+    <label class="filter-button">
+        <input type="checkbox" name="element" value="岩">
+        <span>🪨 岩</span>
+    </label>
+
+</div>
+
+        <br><br>
+
+        <button id="random-button">🎲 ランダム！</button>
+
+        <div id="result"></div>
+
+<p>レアリティを選択：</p>
+
+<div class="filter-group">
+
+    <label class="filter-button">
+        <input type="checkbox" name="rarity" value="4">
+        <span>★4</span>
+    </label>
+
+    <label class="filter-button">
+        <input type="checkbox" name="rarity" value="5">
+        <span>★5</span>
+    </label>
+
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
